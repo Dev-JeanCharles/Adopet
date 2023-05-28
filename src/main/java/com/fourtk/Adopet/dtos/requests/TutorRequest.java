@@ -1,16 +1,31 @@
 package com.fourtk.Adopet.dtos.requests;
 
 import com.fourtk.Adopet.entities.Tutor;
+import com.fourtk.Adopet.services.validation.CpfValid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
+@CpfValid
 public class TutorRequest {
     private Long id;
+    @NotBlank(message = "Required field")
+    @Size(min = 5, max = 50, message = "Required field")
     private String name;
+    @Email
+    @NotBlank(message = "Required field")
     private String email;
+    @NotBlank(message = "Required field")
     private String password;
+    @NotBlank(message = "Required field")
     private String cpf;
+    @NotBlank(message = "Required field")
     private String address;
+    @NotBlank(message = "Required field")
     private String city;
+    @NotBlank(message = "Required field")
     private String uf;
+    @NotBlank(message = "Required field")
     private String phone;
     private String image;
 

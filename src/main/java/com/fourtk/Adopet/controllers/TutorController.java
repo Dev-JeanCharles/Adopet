@@ -2,6 +2,7 @@ package com.fourtk.Adopet.controllers;
 
 import com.fourtk.Adopet.dtos.requests.TutorRequest;
 import com.fourtk.Adopet.services.TutorService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ public class TutorController {
     private TutorService service;
 
     @PostMapping
-    public ResponseEntity<TutorRequest> insertTutors(@RequestBody TutorRequest request) {
+    public ResponseEntity<TutorRequest> insertTutors(@Valid @RequestBody TutorRequest request) {
 
         request = service.insertTutor(request);
 

@@ -12,6 +12,11 @@ public class TutorService {
     @Autowired
     private TutorRepository repository;
 
+    // TODO: 27/05/2023 implementar os logs
+    // TODO: 27/05/2023 implementar exceptions 
+    // TODO: 27/05/2023 implementar listernes 
+    // TODO: 27/05/2023 implementar o validador personificado de email 
+    
     public TutorRequest insertTutor(TutorRequest request) {
 
         Tutor entity = new Tutor();
